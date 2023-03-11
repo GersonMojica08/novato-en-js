@@ -22,7 +22,7 @@
 }
 
 #navbar ul li {
-  color: rgba(230, 230, 230, .9);
+  color: rgba(230, 230, 230, 0.9);
   list-style: none;
   padding: 15px 10px;
   border-bottom: 3px solid black;
@@ -56,5 +56,26 @@ a {
   width: 40px;
   text-align: center;
   font-size: 30px;
- 
+}
+
+.greeting_button {
+  display: none;
+  margin-left: 500px;
+  margin-top: 500px;
+}
+
+.greeting_button_active {
+  display: inline-block;
+}
+
+.saludo {
+  display: none;
+  margin-left: 500px;
+  margin-top: 200px;
+  z-index: 4;
+  color: black;
+}
+
+.saludo_active {
+  display: inline-block;
 }

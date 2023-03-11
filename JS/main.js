@@ -44,4 +44,32 @@ etiqueta_ul.appendChild(etiqueta_li2);
 //mandar a llamar todo en el navbar
 navbarContainer.appendChild(etiqueta_ul);
 
+const greeatingButton = document.createElement("button");
+
+greeatingButton.innerHTML = "Saludar"
+greeatingButton.classList.add("greeting_button");
+
+const body = document.getElementById("body");
+body.appendChild(greeatingButton);
+
+
+
+etiqueta_li1.addEventListener("click", function() {
+  greeatingButton.classList.add("greeting_button_active");
+})
+
+const greating = document.createElement("p");
+greating.innerHTML = "Hola mundo!";
+greating.classList.add("saludo");
+
+body.appendChild(greating);
+
+
+greeatingButton.addEventListener("click", function() {
+  greating.classList.add("saludo_active");
+})
+
+
+
+
 
