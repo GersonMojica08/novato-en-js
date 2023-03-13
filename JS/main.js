@@ -22,7 +22,7 @@ buttonNavbar.addEventListener('click', function () {
 });
 
 
-/* ESTO ES PA LOS UL AND LI */
+/* ESTO ES PA LOS ul AND li */
 const etiqueta_ul = document.createElement("ul");
 
 const etiqueta_li1 = document.createElement("li");
@@ -44,31 +44,97 @@ etiqueta_ul.appendChild(etiqueta_li2);
 //mandar a llamar todo en el navbar
 navbarContainer.appendChild(etiqueta_ul);
 
-const greeatingButton = document.createElement("button");
+/*********************************************************************/
+/* CREAMOS LOS Div PARA METER EL SALUDO */
+const div_1 = document.createElement("div");
+div_1.classList.add("div_1");
+div_1.classList.add("esconder_elemento");
+const div_2 = document.createElement("div");
+div_2.classList.add("div_2");
+div_2.innerText = "Hola Bienvenido al Mundo Web";
 
+const boton_eliminar_bienvenida = document.createElement("button");
+boton_eliminar_bienvenida.classList.add("boton_eliminar_bienvenida");
+boton_eliminar_bienvenida.innerText = "X";
+div_2.appendChild(boton_eliminar_bienvenida);
+
+/*********************************************************************/
+/* CREACION DEL BOTON SALUDAR: acapite Inicio */
+const greeatingButton = document.createElement("button");
 greeatingButton.innerHTML = "Saludar"
 greeatingButton.classList.add("greeting_button");
-
+/* el boton se mete al body */
 const body = document.getElementById("body");
+/*********************************************************************/
+body.appendChild(div_1);
+div_1.appendChild(div_2);
+/*********************************************************************/
+
 body.appendChild(greeatingButton);
-
-
-
+/* evento para mostrar la clase del boton activa, mostrarlo al html */
 etiqueta_li1.addEventListener("click", function() {
   greeatingButton.classList.add("greeting_button_active");
 })
 
-const greating = document.createElement("p");
-greating.innerHTML = "Hola mundo!";
-greating.classList.add("saludo");
-
-body.appendChild(greating);
-
-
+/* Evento para mostrar el saludo en el html */
 greeatingButton.addEventListener("click", function() {
-  greating.classList.add("saludo_active");
+  /* Mostrar el div_1 */
+  div_1.classList.remove("esconder_elemento");
+  // greating.classList.add("saludo_active");
 })
 
+/* CREACION DEL FORMULARIO: acapite Formulario */
+const formulario_ = document.createElement("form");
+formulario_.classList.add("formularioclass");
+
+const inputName = document.createElement("input");
+inputName.classList.add("inputnameclass");
+inputName.placeholder = "Nombre";
+
+const inputApellido = document.createElement("input");
+inputApellido.classList.add("inputapellidoclass");
+inputApellido.placeholder = "Apellido";
+
+const inputcorreo = document.createElement("input");
+inputcorreo.classList.add("inputcorreoclass");
+inputcorreo.placeholder = "Correo";
+inputcorreo.type ="email";
+
+const boton_guardar = document.createElement("button");
+boton_guardar.classList.add("boton_guardar");
+boton_guardar.innerHTML = "Guardar"
+
+/* meter los input en el form */
+formulario_.appendChild(inputName);
+formulario_.appendChild(inputApellido);
+formulario_.appendChild(inputcorreo);
+formulario_.appendChild(boton_guardar);
+
+/* evento para mostrar el formulario en el html al dar clic
+en el acapite formulario*/
+body.appendChild(formulario_);
+etiqueta_li2.addEventListener("click", function() {
+  formulario_.classList.add("formularioclass_active")
+})
+/*  Quitar lo que esta en li2 cuando das clic en li1 */
+etiqueta_li1.addEventListener("click", function() {
+  formulario_.classList.remove("formularioclass_active");
+})
+/*  Quitar lo que esta en li1 cuando das clic en li2 */
+etiqueta_li2.addEventListener("click", function() {
+  greeatingButton.classList.remove("greeting_button_active");
+  div_1.classList.add("esconder_elemento");
+
+})
+/*********************************************************************/
+etiqueta_li1.addEventListener("click", function() {
+  div_1.classList.add("div_1");
+})
+ // borrar la bienvenida
+boton_eliminar_bienvenida.addEventListener("click", function() {
+  div_1.classList.add("esconder_elemento");
+})
+/*********************************************************************/
 
 
 

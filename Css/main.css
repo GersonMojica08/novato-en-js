@@ -57,25 +57,103 @@ a {
   text-align: center;
   font-size: 30px;
 }
+/* desde aca comienza lo bonito */
 
 .greeting_button {
   display: none;
   margin-left: 500px;
   margin-top: 500px;
-}
+  height: 50px;
+  /*border-radius: 25%;*/
+  width: 355px;
+  color: white;
+  background-color: rgba(225, 25, 71, 0.771);
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+/* mostrar el boton*/
 .greeting_button_active {
   display: inline-block;
 }
-
 .saludo {
   display: none;
   margin-left: 500px;
   margin-top: 200px;
-  z-index: 4;
   color: black;
 }
-
+/* mostrar el mensaje*/
 .saludo_active {
   display: inline-block;
+}
+/* formulario */
+.formularioclass{
+  display: none;
+  margin-left: 500px;
+  margin-top: 200px;
+  color: black;
+  border-style: solid;
+  padding: 35px;
+}
+.formularioclass_active{
+  display: inline-block;
+}
+/*input nombre*/
+.inputnameclass{
+  width: 48%;
+  float:left;
+
+}
+/*input apellido*/
+.inputapellidoclass{
+  width: 48%;
+  float:right;
+
+}
+/*input correo*/
+.inputcorreoclass{
+  width: 100%;
+  margin-top: 10px;
+}
+/*boton guardar*/
+.boton_guardar{
+  float: right;
+  margin-top: 10px;
+  background-color: rgba(225, 25, 71, 0.771);
+  width: 80px;
+  height: 30px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+.div_1{
+  position: absolute;
+  left: 500px;
+  top: 200px;
+  width: 100px;
+  height: 100px;
+
+}
+.div_1_active{
+  display: inline-block;
+}
+.div_2{
+  background-color: pink;
+  width: 480px;
+  height: 35px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px;
+  text-align: left;
+  color: white;
+  padding: 5%;
+}
+.boton_eliminar_bienvenida{
+  background-color: black;
+  border-radius: 100%;
+  padding: 1%;
+  float: right;
+  color: white;
+}
+.esconder_elemento{
+  display: none;
 }
