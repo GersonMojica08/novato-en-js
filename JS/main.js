@@ -16,9 +16,9 @@ navbarContainer.appendChild(buttonNavbar);
 //* Funcion de aparecer y desaparecer el navbar lateral
 // sidebar toggle
 buttonNavbar.addEventListener('click', function () {
-  console.log('clik')
+  console.log('clik');
   document.getElementById('navbar').classList.toggle('active');
-  console.log(document.getElementById('navbar'))
+  console.log(document.getElementById('navbar'));
 });
 
 
@@ -95,11 +95,13 @@ inputName.name = "nombre";
 const inputApellido = document.createElement("input");
 inputApellido.classList.add("inputapellidoclass");
 inputApellido.placeholder = "Apellido";
+inputApellido.name = "apellido";
 
 const inputcorreo = document.createElement("input");
 inputcorreo.classList.add("inputcorreoclass");
 inputcorreo.placeholder = "Correo";
 inputcorreo.type ="email";
+inputcorreo.name ="correo";
 
 const boton_guardar = document.createElement("button");
 boton_guardar.classList.add("boton_guardar");
@@ -148,23 +150,21 @@ var PRINCIPAL = []
 boton_guardar.addEventListener("click", function(e) {
   e.preventDefault();
   const captura_data = formulario_.querySelectorAll("input");
-  console.log("este un clic de prueva",captura_data);
+  //console.log("este un clic de prueva",captura_data);
   agregar_a_tabla(captura_data);
   
 })
-
 
 function actualizar_tabla(){
   let tbody = document.getElementById("datos");
   tbody.innerHTML = "";
 
   for(let i=0; i < PRINCIPAL.length; i++){
-      let trt = "<tr ><td>"+ PRINCIPAL[i].nombre +"</td><td>"+ PRINCIPAL[i].apellido  +"</td><td>"+ PRINCIPAL[i].correo +"</td><td>"+ "<button onclick=eliminar('"+ i +"')>X</button>" +"</td></tr>"
-       tbody.innerHTML+=trt;
+      let trt = "<tr ><td>"+ PRINCIPAL[i].nombre +"</td><td>"+ PRINCIPAL[i].apellido  +"</td><td>"+ PRINCIPAL[i].correo +"</td><td>"+ "<button onclick=eliminar('"+ i +"')>X</button>" +"</td></tr>";
+      tbody.innerHTML+=trt;
    }
 }
 
-/*  */
 
 function agregar_a_tabla(captura_data){
     //console.log(formulario);
@@ -185,7 +185,7 @@ function eliminar(i){
 
 /*esto es para esconder y aparecer la tabla*/
 const tabla_data = document.getElementById("tabla");
-tabla_data.classList.add("esconder_elemento")
+tabla_data.classList.add("esconder_elemento");
 
 etiqueta_li1.addEventListener("click", function() {
   tabla_data.classList.add("esconder_elemento");

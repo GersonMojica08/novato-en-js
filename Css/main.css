@@ -183,3 +183,19 @@ background-color: pink;
 .esconder_elemento{
   display: none;
 }
+.table{
+  margin-left: 400px;
+  margin-top: 55px;
+  color: rgb(19, 23, 24);
+  border-style: solid;
+  width: 36.2%;
+  text-align: center;
+  font-family: cursive;
+
+}
+th, td{
+  border: solid 1px pink;
+  padding: 6px;
+}
+
+
