@@ -160,7 +160,7 @@ function actualizar_tabla(){
   tbody.innerHTML = "";
 
   for(let i=0; i < PRINCIPAL.length; i++){
-      let trt = "<tr ><td>"+ PRINCIPAL[i].nombre +"</td><td>"+ PRINCIPAL[i].apellido  +"</td><td>"+ PRINCIPAL[i].correo +"</td><td>"+ "<button onclick=eliminar('"+ i +"')>X</button>" +"</td></tr>";
+      let trt = "<tr ><td>"+ PRINCIPAL[i]?.nombre +"</td><td>"+ PRINCIPAL[i]?.apellido  +"</td><td>"+ PRINCIPAL[i]?.correo +"</td><td>"+ "<button onclick=eliminar('"+ i +"')>X</button>" +"</td></tr>";
       tbody.innerHTML+=trt;
    }
 }
@@ -180,6 +180,7 @@ function agregar_a_tabla(captura_data){
 
 function eliminar(i){
   delete PRINCIPAL[i];
+  PRINCIPAL = PRINCIPAL.filter(data => data =! undefined);
   actualizar_tabla();
 }
 
